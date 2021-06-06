@@ -1,7 +1,7 @@
 # LiquidDynamicContext
 
-This gem addresses a two common problem when dealing with applications that provide non-technical
-users to customize system messages via liquid templates:
+This gem addresses two common problems when dealing with applications that provide non-technical
+users the ability to customize system messages via liquid templates:
 
 - **lack of structure** in how the context is generated, leading to a grab-bag class that does everything
 - **poor performance** due to unnecessary computations to provide all variables for the context,
