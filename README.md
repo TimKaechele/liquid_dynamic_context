@@ -59,7 +59,7 @@ class UserBindingResolver < LiquidDynamicContext::BindingResolver
 end
 ```
 
-## Using the resolver
+### Using the resolver
 
 Now that we have written the first resolver it's time to wire it all up
 and use our new resolver to provide a context for our template.
