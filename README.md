@@ -43,7 +43,7 @@ require 'liquid_dynamic_context'
 
 # /app/messages/resolvers/user_binding_resolver.rb
 class UserBindingResolver < LiquidDynamicContext::BindingResolver
-  # first we have state the bindings that this resolver can provide
+  # first we have to declare the bindings that this resolver can provide
   register_binding :email, :username
 
   protected
@@ -82,7 +82,7 @@ LIQUID
 # which knows about all our available resolvers
 template_context = LiquidDynamicContext::TemplateContext.new([UserBindingResolver.new])
 
-# Remember that we can pass dynamic attributes to the context to resolve data on
+# Remember that we can pass dynamic attributes to the resolvers to assign data on
 # the fly, in this example we are going to pass in the current_user_id via a hash
 models = {
   current_user_id: 4902,
