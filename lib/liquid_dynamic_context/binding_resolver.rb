@@ -42,6 +42,7 @@ module LiquidDynamicContext
     end
 
     protected
+
     # Method to implemented by subclasses
     #
     # @param models [Any] An object that can be used to provide dynamic content
