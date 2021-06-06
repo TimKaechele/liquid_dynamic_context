@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require "simplecov"
+SimpleCov.start
+
 require "liquid_dynamic_context"
 
 RSpec.configure do |config|
