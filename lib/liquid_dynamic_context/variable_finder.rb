@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 module LiquidDynamicContext
+  # Provides access to variables in a liquid template
   class VariableFinder
-
     # Extracts all used variables from a liquid template.
     #
     # @param template_string [String] a string with a valid liquid template
     #
-    # @return an enumerable with the variables found in the template, the variables
+    # @return [Enumerable<Symbol>] an enumerable with the variables found in the template, the variables
     #   are represented as symbols
     def find_variables(template_string)
       parsed_template = Liquid::Template.parse(template_string)

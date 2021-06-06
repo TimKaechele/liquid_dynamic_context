@@ -15,5 +15,4 @@ require_relative "liquid_dynamic_context/variable_finder"
 
 module LiquidDynamicContext
   class Error < StandardError; end
-  # Your code goes here...
 end

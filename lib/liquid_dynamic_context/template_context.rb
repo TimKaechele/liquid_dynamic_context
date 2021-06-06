@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module LiquidDynamicContext
+  # Main entry point to resolve variables to bindings
   class TemplateContext
     attr_reader :binding_resolvers,
                 :variable_finder
@@ -21,7 +22,8 @@ module LiquidDynamicContext
     # @param models [Any] an object with dynamic data you want to
     #   pass to your resolvers, can be nil
     #
-    # @return a hash with string keys that contains the bindings for the template
+    # @return [Hash<String,Any>] a hash with string keys that contains the bindings
+    #   for the template
     def resolve(template_string, models)
       binding_resolvers.select { |resolver| resolver.needs_to_run?(variables(template_string)) }
                        .map { |resolver| resolver.call(models) }
