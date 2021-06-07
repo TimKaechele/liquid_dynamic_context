@@ -51,7 +51,7 @@ class UserBindingResolver < LiquidDynamicContext::BindingResolver
   # In this method we do the actual work of resolving the bindings to
   # their respective values
   def resolve(models, context)
-    user = User.find(model[:current_user_id])
+    user = User.find(models[:current_user_id])
 
     context.email = user.email
     context.username = user.username
